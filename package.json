@@ -1,24 +1,40 @@
 {
   "name": "add-text-to-bundle-plugin",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A webpack plugin to add text to bundle files",
   "main": "index.js",
   "directories": {
     "example": "example",
-    "test": "test"
+    "test":"test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive ./test/*_spec.js",
+    "test:watch": "npm run test -- --watch",
+    "test-travis": "istanbul cover _mocha -- -R spec ./test/*_spec.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MoHuiTou/add-text-to-bundle-plugin.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "add text"
+  ],
+  "author": "MoHuiTou",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MoHuiTou/add-text-to-bundle-plugin/issues"
   },
-  "homepage": "https://github.com/MoHuiTou/add-text-to-bundle-plugin#readme"
+  "homepage": "https://github.com/MoHuiTou/add-text-to-bundle-plugin#readme",
+  "dependencies": {
+    "rimraf": "~2.5.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.2",
+    "rewire": "^2.5.1"
+  }
 }
