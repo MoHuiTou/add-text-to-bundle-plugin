@@ -5,12 +5,12 @@
   "main": "index.js",
   "directories": {
     "example": "example",
-    "test":"test"
+    "test": "test"
   },
   "scripts": {
-    "test": "mocha --recursive ./test/*_spec.js",
+    "test": "ava",
     "test:watch": "npm run test -- --watch",
-    "test-travis": "istanbul cover _mocha -- -R spec ./test/*_spec.js"
+    "test-travis": "istanbul cover ava"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "rimraf": "~2.5.1"
   },
   "devDependencies": {
+    "ava": "^0.21.0",
     "chai": "^3.4.1",
     "coveralls": "^2.11.6",
     "istanbul": "^0.4.2",
