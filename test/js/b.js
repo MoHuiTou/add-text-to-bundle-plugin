@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     mutli: function(...values){
         let result = 1;
         for(var val in values){

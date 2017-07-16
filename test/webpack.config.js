@@ -1,8 +1,8 @@
 var path = require('path');
-var AddText2BundlePlugin = require('add-text-to-bundle-plugin');
+var AddText2BundlePlugin = require('../index.js');
 
 module.exports = {
-  entry: './js/a.js',
+  entry: './test/js/a.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
