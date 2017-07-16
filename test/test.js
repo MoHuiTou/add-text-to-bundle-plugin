@@ -1,7 +1,7 @@
 import test from 'ava';
 import webpack from 'webpack';
 // 0. Import the config that uses my plugin
-import options from '../example/webpack.config.js';
+import options from './webpack.config.js';
 test.cb('Compiles routes nested at one level', t => {
   // 1. Run webpack
   webpack(options, function(err, stats) {
@@ -12,10 +12,11 @@ test.cb('Compiles routes nested at one level', t => {
       return t.end(stats.toString());
     }
     // 3. Map asset objects to output filenames
-    const files = stats.toJson().assets.map(x => x.name);
+    console.log(stats.compilation.assets["bundle.js"]);
+    const files = stats.compilation.assets["bundle.js"].source();
     // 4. Run assertions. Make sure that the three expected
     //    HTML files were generated
-    t.true(files.indexOf('bundle.js') !== -1);
+    t.true(files.indexOf('var i=0;') === 0);
     t.end();
   });
 });
