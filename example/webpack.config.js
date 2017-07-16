@@ -1,5 +1,5 @@
 var path = require('path');
-var AddText2BundlePlugin = require('../index.js');
+var AddText2BundlePlugin = require('add-text-to-bundle-plugin');
 
 module.exports = {
   entry: './js/a.js',

@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "add-text-to-bundle-plugin": "^1.0.0"
   }
 }
