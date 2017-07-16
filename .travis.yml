@@ -8,4 +8,4 @@ node_js:
   - "0.10"
 
 script: "npm run-script test-travis"
-after_script: "cat ./coverage/lcov.info | covera
+after_script: "cat ./coverage/lcov.info | covera"
